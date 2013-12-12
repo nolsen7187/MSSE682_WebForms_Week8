@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.ServiceModel;
 using WCFClient;
 
+
 namespace BUS
 {
     public class BUS_Facade
@@ -117,6 +118,15 @@ namespace BUS
                 return "Valid Username Entered.";
             }
 
+        }
+        public string WSAuthenticateUser()
+        {
+            WSAuthenticate.Service1 wsClient = new WSAuthenticate.Service1();
+            string wcfOutput = wsClient.AuthenticateUser(logon, password);
+            //Process.Start("@C:\\Users\\NOLSEN\\Source\\Repos\\MSSE682_WebForms_Week7\\MBSDEVBIDA_WebForms\\WCFHost\\bin\\Debug\\WCFHost.exe");
+            //WCFClient.ServiceReference1.ServicesClient client = new WCFClient.ServiceReference1.ServicesClient();
+            //WCFClient.WCFAuthenticationClient client = new WCFAuthenticationClient();
+            return wcfOutput;
         }
     }
 }

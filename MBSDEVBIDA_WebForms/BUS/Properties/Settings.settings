@@ -5,5 +5,8 @@
     <Setting Name="BUS_localhost_AuthenticationServices" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:8090/WCFServiceLibrary/AuthenticationServices/</Value>
     </Setting>
+    <Setting Name="BUS_WSAuthenticate_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49684/Service1.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

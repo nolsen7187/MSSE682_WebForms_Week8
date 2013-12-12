@@ -32,5 +32,15 @@ namespace BUS.Properties {
                 return ((string)(this["BUS_localhost_AuthenticationServices"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49684/Service1.asmx")]
+        public string BUS_WSAuthenticate_Service1 {
+            get {
+                return ((string)(this["BUS_WSAuthenticate_Service1"]));
+            }
+        }
     }
 }
