@@ -1,0 +1,11 @@
+C:\Users\NOLSEN\Source\Repos\MSSE682_WebForms_Week8\MBSDEVBIDA_WebForms\WSApplication\bin\WSApplication.dll
+C:\Users\NOLSEN\Source\Repos\MSSE682_WebForms_Week8\MBSDEVBIDA_WebForms\WSApplication\bin\WSApplication.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE682_WebForms_Week8\MBSDEVBIDA_WebForms\WSApplication\obj\Debug\WSApplication.csprojResolveAssemblyReference.cache
+C:\Users\NOLSEN\Source\Repos\MSSE682_WebForms_Week8\MBSDEVBIDA_WebForms\WSApplication\obj\Debug\WSApplication.dll
+C:\Users\NOLSEN\Source\Repos\MSSE682_WebForms_Week8\MBSDEVBIDA_WebForms\WSApplication\obj\Debug\WSApplication.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE682_WebForms_Week8\MBSDEVBIDA_WebForms\WSApplication\bin\SVC.dll
+C:\Users\NOLSEN\Source\Repos\MSSE682_WebForms_Week8\MBSDEVBIDA_WebForms\WSApplication\bin\DAL.dll
+C:\Users\NOLSEN\Source\Repos\MSSE682_WebForms_Week8\MBSDEVBIDA_WebForms\WSApplication\bin\EntityFramework.dll
+C:\Users\NOLSEN\Source\Repos\MSSE682_WebForms_Week8\MBSDEVBIDA_WebForms\WSApplication\bin\SVC.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE682_WebForms_Week8\MBSDEVBIDA_WebForms\WSApplication\bin\DAL.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE682_WebForms_Week8\MBSDEVBIDA_WebForms\WSApplication\bin\EntityFramework.xml
