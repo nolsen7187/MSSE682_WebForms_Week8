@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using System.Xml;
 using SVC;
 
 namespace WSApplication
@@ -18,18 +20,25 @@ namespace WSApplication
     public class Service1 : System.Web.Services.WebService
     {
         private bool logonFound, passwordFound;
-        private string verifiedLogon;
+        private string verifiedLogon, xmlReader, lclXml, lclUsername, lclPassword;
+        private SVC_XMLHandler svcXMLHandler;
+        private SVC_AuthenticateUser svcAuthenticateUser;
+ 
 
         [WebMethod]
-        public string AuthenticateUser(string logon, string password)
+        public string AuthenticateUser(string passedInXML)
         {
-            SVC_AuthenticateUser svcAuthenticateUser = new SVC_AuthenticateUser();
-            logonFound = svcAuthenticateUser.AuthenticateLogon(logon);
-            passwordFound = svcAuthenticateUser.AuthenticatePassword(password);
+            svcXMLHandler = new SVC_XMLHandler();
+            svcAuthenticateUser = new SVC_AuthenticateUser();
+
+            //lclUsername = svcXMLHandler.UserNameEncodeXML(
+
+            logonFound = svcAuthenticateUser.AuthenticateLogon(lclUsername);
+            passwordFound = svcAuthenticateUser.AuthenticatePassword(lclPassword);
 
             if ((logonFound && passwordFound) == true)
             {
-                verifiedLogon = logon;
+                verifiedLogon = lclUsername;
                 return verifiedLogon;
             }
             else

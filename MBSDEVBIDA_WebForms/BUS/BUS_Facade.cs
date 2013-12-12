@@ -16,13 +16,14 @@ namespace BUS
     {
         private SVC_PerformAction svcPerformAction;
         private SVC_AuthenticateUser svcAuthenticateUser;
+        private SVC_XMLHandler svcXMLHandler;
 
         private SVC_ClientSideSocketConnection svcClientSideSocketConnection;
 
         private Object lclObjectClass;
         private int lclActionType;
 
-        private String logon, password;
+        private String logon, password, xml;
         private bool foundLogon, foundPassword, isSalesRep;
 
         public BUS_Facade(Object Object, int ActionType)
@@ -121,11 +122,13 @@ namespace BUS
         }
         public string WSAuthenticateUser()
         {
+            svcXMLHandler = new SVC_XMLHandler();
+            xml = svcXMLHandler.UserNameEncodeXML(logon, password);
+
+
+
             WSAuthenticate.Service1 wsClient = new WSAuthenticate.Service1();
             string wcfOutput = wsClient.AuthenticateUser(logon, password);
-            //Process.Start("@C:\\Users\\NOLSEN\\Source\\Repos\\MSSE682_WebForms_Week7\\MBSDEVBIDA_WebForms\\WCFHost\\bin\\Debug\\WCFHost.exe");
-            //WCFClient.ServiceReference1.ServicesClient client = new WCFClient.ServiceReference1.ServicesClient();
-            //WCFClient.WCFAuthenticationClient client = new WCFAuthenticationClient();
             return wcfOutput;
         }
     }

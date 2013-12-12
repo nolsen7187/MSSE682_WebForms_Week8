@@ -53,6 +53,7 @@
     <Compile Include="SVC_PerformAction.cs" />
     <Compile Include="SVC_RepositoryConcreteClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SVC_XMLHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
