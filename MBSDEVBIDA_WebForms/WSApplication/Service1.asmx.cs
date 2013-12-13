@@ -26,12 +26,13 @@ namespace WSApplication
  
 
         [WebMethod]
-        public string AuthenticateUser(string passedInXML)
+        public string AuthenticateUser(string xmlLogon, string xmlPassword)
         {
             svcXMLHandler = new SVC_XMLHandler();
             svcAuthenticateUser = new SVC_AuthenticateUser();
 
-            //lclUsername = svcXMLHandler.UserNameEncodeXML(
+            lclUsername = svcXMLHandler.DecodeXML(xmlLogon);
+            lclPassword = svcXMLHandler.DecodeXML(xmlPassword);
 
             logonFound = svcAuthenticateUser.AuthenticateLogon(lclUsername);
             passwordFound = svcAuthenticateUser.AuthenticatePassword(lclPassword);

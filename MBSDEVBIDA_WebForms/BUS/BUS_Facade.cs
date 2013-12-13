@@ -23,7 +23,7 @@ namespace BUS
         private Object lclObjectClass;
         private int lclActionType;
 
-        private String logon, password, xml;
+        private String logon, password, xmlLogon, xmlPassword;
         private bool foundLogon, foundPassword, isSalesRep;
 
         public BUS_Facade(Object Object, int ActionType)
@@ -123,12 +123,11 @@ namespace BUS
         public string WSAuthenticateUser()
         {
             svcXMLHandler = new SVC_XMLHandler();
-            xml = svcXMLHandler.UserNameEncodeXML(logon, password);
-
-
+            xmlLogon = svcXMLHandler.UserNameEncodeXML(logon);
+            xmlPassword = svcXMLHandler.PasswordEncodeXML(password);
 
             WSAuthenticate.Service1 wsClient = new WSAuthenticate.Service1();
-            string wcfOutput = wsClient.AuthenticateUser(logon, password);
+            string wcfOutput = wsClient.AuthenticateUser(xmlLogon, xmlPassword);
             return wcfOutput;
         }
     }

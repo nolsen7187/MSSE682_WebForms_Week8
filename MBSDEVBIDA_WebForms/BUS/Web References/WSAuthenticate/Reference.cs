@@ -74,26 +74,26 @@ namespace BUS.WSAuthenticate {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AuthenticateUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string AuthenticateUser(string logon, string password) {
+        public string AuthenticateUser(string xmlLogon, string xmlPassword) {
             object[] results = this.Invoke("AuthenticateUser", new object[] {
-                        logon,
-                        password});
+                        xmlLogon,
+                        xmlPassword});
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void AuthenticateUserAsync(string logon, string password) {
-            this.AuthenticateUserAsync(logon, password, null);
+        public void AuthenticateUserAsync(string xmlLogon, string xmlPassword) {
+            this.AuthenticateUserAsync(xmlLogon, xmlPassword, null);
         }
         
         /// <remarks/>
-        public void AuthenticateUserAsync(string logon, string password, object userState) {
+        public void AuthenticateUserAsync(string xmlLogon, string xmlPassword, object userState) {
             if ((this.AuthenticateUserOperationCompleted == null)) {
                 this.AuthenticateUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAuthenticateUserOperationCompleted);
             }
             this.InvokeAsync("AuthenticateUser", new object[] {
-                        logon,
-                        password}, this.AuthenticateUserOperationCompleted, userState);
+                        xmlLogon,
+                        xmlPassword}, this.AuthenticateUserOperationCompleted, userState);
         }
         
         private void OnAuthenticateUserOperationCompleted(object arg) {
